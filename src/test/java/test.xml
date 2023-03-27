@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<suite name = "Sample test Suite" parallel="classes" thread-count="3">
+
+    <test name = "Sample test first">
+        <parameter name ="name" value="Viktar"/>
+        <classes>
+            <class name = "Tests" />
+        </classes>
+
+    </test>
+
+
+</suite>
