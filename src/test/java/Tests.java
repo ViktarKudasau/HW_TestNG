@@ -28,14 +28,16 @@ public class Tests {
     @Test(description = "Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!")
     void testOne() {
 
-
         SoftAssert softAssert = new SoftAssert();
-        int result = Main.summa();
-        double del_result = Main.del();
-        softAssert.assertEquals(result, 5);
-        softAssert.assertEquals(del_result, 1.5);
-        System.out.println("Summa = " + result);
+        int summa_result = Main.summa(3, 5);
+        double del_result = Main.del(5, 2);
+        String replacement_result = Main.replacement("Oklahoma");
+        softAssert.assertEquals(summa_result, 8);
+        softAssert.assertEquals(del_result, 2.5);
+        softAssert.assertEquals(replacement_result, "Oklbhomb");
+        System.out.println("Summa = " + summa_result);
         System.out.println("del = " + del_result);
+        System.out.println("String after replace " + replacement_result);
         softAssert.assertAll();
 
     }

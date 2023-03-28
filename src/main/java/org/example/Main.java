@@ -4,26 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        System.out.println(summa());
-        System.out.println(del());
-        System.out.println(replacement("aaaaa"));
     }
 
-    public static int summa(){
-    int a = 2;
-    int b = 3;
-    return(a+b);
+    public static int summa(Integer integer_a, Integer integer_b){
+        System.out.println("Число 1 = " + integer_a);
+        System.out.println("Число 2 = " + integer_b);
+        int result = integer_a + integer_b;
+    return(result);
     }
 
-    public static double del(){
-        double a = 3;
-        double b = 2;
+    public static double del(double a, double b){
         double c = a/b;
         return(c);
     }
 
     public static String replacement(String string){
-
         String result = string.replace("a", "b");
         return result;
     }
