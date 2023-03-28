@@ -15,6 +15,9 @@ public class Main {
 
     public static double del(double a, double b){
         double c = a/b;
+        if (b == 0){
+            throw new NumberFormatException();
+        }
         return(c);
     }
 
