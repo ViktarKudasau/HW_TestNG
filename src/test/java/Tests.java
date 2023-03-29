@@ -73,7 +73,7 @@ public class Tests {
                 {12, 17, 29},
         };
     }
-    @Test(groups = "Sum", dataProvider = "Test_Sum")
+    @Test(groups = "sum", dataProvider = "Test_Sum")
     public void Test_3(int a, int b, int c) {
         SoftAssert softAssert = new SoftAssert();
         int sum_result = Main.sum(a, b);
@@ -99,7 +99,7 @@ public class Tests {
                 {"G" , "G"}
         };
     }
-    @Test(groups = "Replacement", dataProvider = "Test_Replacement")
+    @Test(groups = "replacement", dataProvider = "Test_Replacement")
     public void Test_4(String a, String b) {
         SoftAssert softAssert = new SoftAssert();
         String replacement_result = Main.replacement(a);

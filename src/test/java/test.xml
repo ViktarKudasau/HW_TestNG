@@ -17,7 +17,7 @@
     <test name = "Sample Test Sum">
         <groups>
             <run>
-                <include name = "Sum" />
+                <include name = "sum" />
             </run>
         </groups>
 
@@ -29,7 +29,7 @@
     <test name = "Sample Test Replacement">
         <groups>
             <run>
-                <include name = "Replacement" />
+                <include name = "replacement" />
             </run>
         </groups>
 
