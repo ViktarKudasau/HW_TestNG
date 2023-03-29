@@ -26,4 +26,16 @@
         </classes>
     </test>
 
+    <test name = "Sample Test Replacement">
+        <groups>
+            <run>
+                <include name = "Replacement" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name = "Tests" />
+        </classes>
+    </test>
+
 </suite>

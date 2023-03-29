@@ -4,7 +4,13 @@ public class Main {
 
     public static void main(String[] args) throws NoSuchMethodException {
         System.out.println("Hello world!");
-        division(5, 5);
+
+/*        division(5, 5);
+        sum(1,2);
+        replacement("Fantastic");
+        System.out.println(sum(5,5));
+        System.out.println(replacement("aha"));
+ */
     }
 
     public static int sum(Integer a, Integer b) {
@@ -19,8 +25,8 @@ public class Main {
         } return c;
     }
 
-    public static String replacement(String string){
-        String result = string.replace("a", "b");
+    public static String replacement(String a){
+        String result = a.replace("a", "b");
         return result;
     }
 }

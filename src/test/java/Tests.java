@@ -84,30 +84,32 @@ public class Tests {
         softAssert.assertAll();
     }
 
-/*    @Test(groups = "sum")
-    void testOne() throws NoSuchMethodException {
+    @DataProvider(name = "Test_Replacement")
+    public static Object[][] replacement_Chars() {
+        return new Object[][] {
+                {"" , ""},
+                {" " , " "},
+                {"a", "b"},
+                {" a", " b"},
+                {"a ", "b "},
+                {"a_", "b_"},
+                {"__a", "__b"},
+                {"a7107%-aa", "b7107%-bb"},
+                {"% a !", "% b !"},
+                {"G" , "G"}
+        };
+    }
+    @Test(groups = "Replacement", dataProvider = "Test_Replacement")
+    public void Test_4(String a, String b) {
         SoftAssert softAssert = new SoftAssert();
-        double division_result = Main.division(5, 2);
-        softAssert.assertEquals(division_result, 2.5);
-        System.out.println("division = " + division_result);
+        String replacement_result = Main.replacement(a);
+        softAssert.assertEquals(replacement_result, b);
+        System.out.println("String before replacement =" + a);
+        System.out.println("excepted_Replacement_result =" + b);
+        System.out.println("actual_Replacement_result =" + replacement_result);
         softAssert.assertAll();
     }
 
-    @Test(enabled = false)
-    void testTwo() throws NoSuchMethodException {
-        SoftAssert softAssert = new SoftAssert();
-        int summa_result = Main.sum(3, 5);
-        double del_result = Main.division(5, 5);
-        String replacement_result = Main.replacement("Oklahoma");
-        softAssert.assertEquals(summa_result, 8);
-        softAssert.assertEquals(del_result, 1.0);
-        softAssert.assertEquals(replacement_result, "Oklbhomb");
-        System.out.println("Summa = " + summa_result);
-        System.out.println("del = " + del_result);
-        System.out.println("String after replace " + replacement_result);
-        softAssert.assertAll();
-    }
-*/
     @AfterMethod
     void afterMethod() {
         System.out.println("after method");
@@ -126,6 +128,5 @@ public class Tests {
     @AfterSuite
     void afterSuite() {
         System.out.println("After suite");
-
     }
 }
