@@ -7,10 +7,8 @@ public class Main {
         division(5, 5);
     }
 
-    public static int sum(Integer integer_a, Integer integer_b) {
-        System.out.println("Число 1 = " + integer_a);
-        System.out.println("Число 2 = " + integer_b);
-        int result = integer_a + integer_b;
+    public static int sum(Integer a, Integer b) {
+        int result = a + b;
         return (result);
     }
 

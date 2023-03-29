@@ -55,9 +55,32 @@ public class Tests {
         SoftAssert softAssert = new SoftAssert();
         double division_result = Main.division(a, b);
         softAssert.assertEquals(division_result, c);
-        System.out.println("Число a = " + a + " Число b = " + b);
-        System.out.println("actual_result_division = " + division_result);
-        System.out.println("excepted_result_division = " + c);
+        System.out.println("Число a = " + a + ", Число b = " + b);
+        System.out.println("excepted_Division_result = " + c);
+        System.out.println("actual_Division_result = " + division_result);
+        softAssert.assertAll();
+    }
+
+    @DataProvider(name = "Test_Sum")
+    public static Object[][] sum_Numbers() {
+        return new Object[][] {
+                {-25, 0, -25},
+                {0, -1000, -1000},
+                {0, 3, 3},
+                {15, 0, 15},
+                {0, 0, 0},
+                {-15, -10, -25},
+                {12, 17, 29},
+        };
+    }
+    @Test(groups = "Sum", dataProvider = "Test_Sum")
+    public void Test_3(int a, int b, int c) {
+        SoftAssert softAssert = new SoftAssert();
+        int sum_result = Main.sum(a, b);
+        softAssert.assertEquals(sum_result, c);
+        System.out.println("Число a = " + a + ", Число b = " + b);
+        System.out.println("excepted_Sum_result = " + c);
+        System.out.println("actual_Sum_result = " + sum_result);
         softAssert.assertAll();
     }
 

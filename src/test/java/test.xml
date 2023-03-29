@@ -3,7 +3,6 @@
 <suite name = "Sample test Suite" parallel="classes" thread-count="1">
 
     <test name = "Sample Test Division">
-
         <groups>
             <run>
                 <include name = "division" />
@@ -13,8 +12,18 @@
         <classes>
             <class name = "Tests" />
         </classes>
-
     </test>
 
+    <test name = "Sample Test Sum">
+        <groups>
+            <run>
+                <include name = "Sum" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name = "Tests" />
+        </classes>
+    </test>
 
 </suite>
