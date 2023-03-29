@@ -25,42 +25,70 @@ public class Tests {
         System.out.println("before method");
     }
 
-    @Test(description = "Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!")
-    void testOne() {
+    @Test(groups = "division", description = "Division by Zero", expectedExceptions = NoSuchMethodException.class)
+    void test_1() throws NoSuchMethodException {
+        System.out.println("test 1 'Division by Zero' started");
+        Main.division(25,0);
+    }
 
+    @DataProvider(name = "Test_Division")
+    public static Object[][] primeNumbers() {
+        return new Object[][] {
+                {-2, 2, -1},
+                {22, -2, -11},
+                {15, 3, 5},
+                {0, 3, 0},
+                {0, -0.0003, -0.0},
+                {-1000000, -2000000, 0.5},
+                {1, 0.005, 200},
+                {-1000000000, -0.0000000001, 1e19},
+                {0.0001, 20, 5e-6},
+                {-0.0001, -20, 5e-6},
+                {-0.0001, 20, -5e-6},
+                {0.0001, 0.20, 0.0005},
+                {0.0001, -0.20, -0.0005},
+                {-0.0001, -0.20, 0.0005},
+        };
+    }
+    @Test(dependsOnMethods = "test_1", groups = "division", dataProvider = "Test_Division")
+    public void Test_2(double a, double b, double c) throws NoSuchMethodException {
         SoftAssert softAssert = new SoftAssert();
-        int summa_result = Main.summa(3, 5);
-        double del_result = Main.del(5, 2);
+        double division_result = Main.division(a, b);
+        softAssert.assertEquals(division_result, c);
+        System.out.println("Число a = " + a + " Число b = " + b);
+        System.out.println("actual_result_division = " + division_result);
+        System.out.println("excepted_result_division = " + c);
+        softAssert.assertAll();
+    }
+
+/*    @Test(groups = "sum")
+    void testOne() throws NoSuchMethodException {
+        SoftAssert softAssert = new SoftAssert();
+        double division_result = Main.division(5, 2);
+        softAssert.assertEquals(division_result, 2.5);
+        System.out.println("division = " + division_result);
+        softAssert.assertAll();
+    }
+
+    @Test(enabled = false)
+    void testTwo() throws NoSuchMethodException {
+        SoftAssert softAssert = new SoftAssert();
+        int summa_result = Main.sum(3, 5);
+        double del_result = Main.division(5, 5);
         String replacement_result = Main.replacement("Oklahoma");
         softAssert.assertEquals(summa_result, 8);
-        softAssert.assertEquals(del_result, 2.5);
+        softAssert.assertEquals(del_result, 1.0);
         softAssert.assertEquals(replacement_result, "Oklbhomb");
         System.out.println("Summa = " + summa_result);
         System.out.println("del = " + del_result);
         System.out.println("String after replace " + replacement_result);
         softAssert.assertAll();
-
     }
-
+*/
     @AfterMethod
     void afterMethod() {
         System.out.println("after method");
     }
-
-   /* @DataProvider(name = "test1")
-    public static Object[][] primeNumbers() {
-        return new Object[][] {{2, true}, {6, false}, {19, true}, {22, false}, {23, true}};
-    }
-    @DataProvider(name = "test1")
-    public static Object[][] primeNumbers() {
-        return new Object[][] { { new Bean("hi I am the bean", 111) } };
-    }
-
-    @Test(dataProvider = "test1")
-    public void testMethod(Bean myBean) {
-        System.out.println(myBean.getVal() + " " + myBean.getI());
-    }
-}   */
 
     @AfterTest
     void afterTest () {
