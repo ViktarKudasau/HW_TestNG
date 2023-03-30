@@ -52,7 +52,6 @@ public class Tests {
     }
     @Test(dependsOnMethods = "test_1", groups = "division", dataProvider = "Test_Division")
     public void Test_2(double a, double b, double c) throws NoSuchMethodException {
-        SoftAssert softAssert = new SoftAssert();
         double division_result = Main.division(a, b);
         Assert.assertEquals(division_result, c);
         System.out.println("Число a = " + a + ", Число b = " + b);
@@ -74,7 +73,6 @@ public class Tests {
     }
     @Test(groups = "sum", dataProvider = "Test_Sum")
     public void Test_3(int a, int b, int c) {
-        SoftAssert softAssert = new SoftAssert();
         int sum_result = Main.sum(a, b);
         Assert.assertEquals(sum_result, c);
         System.out.println("Число a = " + a + ", Число b = " + b);
