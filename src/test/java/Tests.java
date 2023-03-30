@@ -85,6 +85,7 @@ public class Tests {
     @DataProvider(name = "Test_Replacement")
     public static Object[][] replacement_Chars() {
         return new Object[][] {
+                {"" , ""},
                 {" " , " "},
                 {"a", "b"},
                 {" a", " b"},
@@ -101,7 +102,6 @@ public class Tests {
     public void Test_4(String a, String b) {
         SoftAssert softAssert = new SoftAssert();
         String replacement_result = Main.replacement(a);
-        softAssert.assertEquals(replacement_result, b);
         softAssert.assertEquals(replacement_result, b);
         softAssert.assertNotNull(b);
         System.out.println("String before replacement =" + a);

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80f36a54-f949-4dc5-bdf1-672ce2605fc8" name="Changes" comment="Rename groups">
+    <list default="true" id="80f36a54-f949-4dc5-bdf1-672ce2605fc8" name="Changes" comment="Update Test_4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680112205959</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add softAssert.assertNotNull to the Test_4">
+      <created>1680157349383</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680157349383</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +197,8 @@
     <MESSAGE value="Add Test_3 (Sum) to the Tests" />
     <MESSAGE value="Add Test_4 (Replacement) to the Tests" />
     <MESSAGE value="Rename groups" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename groups" />
+    <MESSAGE value="Add softAssert.assertNotNull to the Test_4" />
+    <MESSAGE value="Update Test_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Test_4" />
   </component>
 </project>
