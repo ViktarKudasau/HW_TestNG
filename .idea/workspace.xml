@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80f36a54-f949-4dc5-bdf1-672ce2605fc8" name="Changes" comment="Add Test_4 (Replacement) to the Tests">
+    <list default="true" id="80f36a54-f949-4dc5-bdf1-672ce2605fc8" name="Changes" comment="Rename groups">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +65,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests.Test_2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HW_TestNG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="METHOD_NAME" value="Test_2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests.Test_3" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HW_TestNG" />
       <option name="PACKAGE_NAME" value="" />
@@ -89,25 +101,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.test_1" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HW_TestNG" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="test_1" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/HP/HW_TestNG/src/test/java/test.xml" />
         <item itemvalue="TestNG.Tests.Test_4" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.Tests.Test_3" />
-        <item itemvalue="TestNG.Tests.test_1" />
+        <item itemvalue="TestNG.Tests.Test_2" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680111475856</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Rename groups">
+      <created>1680112205959</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680112205959</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +190,7 @@
     <MESSAGE value="Add Test_1, Test_2 (Division) with check &quot;/ 0&quot;" />
     <MESSAGE value="Add Test_3 (Sum) to the Tests" />
     <MESSAGE value="Add Test_4 (Replacement) to the Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Test_4 (Replacement) to the Tests" />
+    <MESSAGE value="Rename groups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename groups" />
   </component>
 </project>

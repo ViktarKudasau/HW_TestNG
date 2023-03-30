@@ -20,7 +20,7 @@ public class Main {
 
     public static double division(double a, double b) throws NoSuchMethodException {
         double c = a / b;
-        if (b == 0) {
+        if (b == 0){
             throw new NoSuchMethodException();
         } return c;
     }

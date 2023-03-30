@@ -54,11 +54,10 @@ public class Tests {
     public void Test_2(double a, double b, double c) throws NoSuchMethodException {
         SoftAssert softAssert = new SoftAssert();
         double division_result = Main.division(a, b);
-        softAssert.assertEquals(division_result, c);
+        Assert.assertEquals(division_result, c);
         System.out.println("Число a = " + a + ", Число b = " + b);
         System.out.println("excepted_Division_result = " + c);
         System.out.println("actual_Division_result = " + division_result);
-        softAssert.assertAll();
     }
 
     @DataProvider(name = "Test_Sum")
@@ -77,17 +76,15 @@ public class Tests {
     public void Test_3(int a, int b, int c) {
         SoftAssert softAssert = new SoftAssert();
         int sum_result = Main.sum(a, b);
-        softAssert.assertEquals(sum_result, c);
+        Assert.assertEquals(sum_result, c);
         System.out.println("Число a = " + a + ", Число b = " + b);
         System.out.println("excepted_Sum_result = " + c);
         System.out.println("actual_Sum_result = " + sum_result);
-        softAssert.assertAll();
     }
 
     @DataProvider(name = "Test_Replacement")
     public static Object[][] replacement_Chars() {
         return new Object[][] {
-                {"" , ""},
                 {" " , " "},
                 {"a", "b"},
                 {" a", " b"},
@@ -96,7 +93,8 @@ public class Tests {
                 {"__a", "__b"},
                 {"a7107%-aa", "b7107%-bb"},
                 {"% a !", "% b !"},
-                {"G" , "G"}
+                {"aaAA" , "bbAA"},
+                {"GdD" , "GdD"},
         };
     }
     @Test(groups = "replacement", dataProvider = "Test_Replacement")
@@ -104,6 +102,8 @@ public class Tests {
         SoftAssert softAssert = new SoftAssert();
         String replacement_result = Main.replacement(a);
         softAssert.assertEquals(replacement_result, b);
+        softAssert.assertEquals(replacement_result, b);
+        softAssert.assertNotNull(b);
         System.out.println("String before replacement =" + a);
         System.out.println("excepted_Replacement_result =" + b);
         System.out.println("actual_Replacement_result =" + replacement_result);
